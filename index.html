@@ -181,7 +181,10 @@ header nav {
     .formules-grid p:last-child { margin-bottom: 0; }
     .formule-prix { font-size: 1.1rem; font-weight: 700; }
     .retour-client { padding: clamp(48px, 8vw, 100px) 0; background: #f1f1f1; }
-    .retour-client p { max-width: 650px; }
+    .avis-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px; align-items: start; margin-bottom: 24px; }
+    .avis-grid blockquote { margin: 0; padding: 24px; background: #fff; border: 1px solid #ddd; }
+    .avis-grid p { margin: 0 0 12px; }
+    .avis-grid p:last-child { margin-bottom: 0; }
   </style>
 </head>
 <body>
@@ -244,8 +247,22 @@ header nav {
     <section class="retour-client" id="avis" aria-labelledby="avis-title">
       <div class="wrap">
         <h2 id="avis-title">Retour client</h2>
-        <p>Découvrez les expériences partagées par les clients de Devins &amp; Divins.</p>
-        <a class="btn dark" href="https://www.google.com/maps/place/Devins+%26+Divins/@48.2415163,6.2182407,8z/data=!4m8!3m7!1s0x6a80cefd51a36eab:0xc1414ca01616514e!8m2!3d48.24906!4d7.5372876!9m1!1b1!16s%2Fg%2F11nhyw8xl0" target="_blank" rel="noopener noreferrer">Lire les avis sur Google <span class="arrow">↗</span></a>
+        <div class="avis-grid">
+          <blockquote>
+            <p>Une soirée d exeption! Entourée d amis et un guide fantastique qui nous accompagne à travers une visite pleines de surprises et anecdotes autour du vin et de notre patrimoine.</p>
+            <p>Merci Damien pour ta bienveillance et le partage de ta passion.</p>
+          </blockquote>
+          <blockquote>
+            <p>Belle dégustation avec accord mets et vins. Découverte de vins inhabituels. Bonne ambiance et bons échanges avec les convives et belle prestation de l’animateur, à la fois simple et accessible, et aussi très professionnelle. Je recommande .</p>
+          </blockquote>
+          <blockquote>
+            <p>J’ai eu l’occasion de découvrir la formule Signature, une soirée dégustation avec accords mets et vins, juste avant les fêtes de Noël, et ce fut une très belle expérience !</p>
+            <p>Damien nous fait découvrir son univers et partage ses connaissances avec passion, le tout dans une ambiance conviviale, chaleureuse et sans prise de tête. Un vrai moment de plaisir et de partage !</p>
+            <p>C’est également une excellente idée cadeau pour offrir une expérience originale à partager entre amis ou en famille.</p>
+            <p>Je recommande vivement cette belle expérience !</p>
+          </blockquote>
+        </div>
+        <a class="btn dark" href="https://www.google.com/maps/place/Devins+%26+Divins/@48.2415163,6.2182407,8z/data=!4m8!3m7!1s0x6a80cefd51a36eab:0xc1414ca01616514e!8m2!3d48.24906!4d7.5372876!9m1!1b1!16s%2Fg%2F11nhyw8xl0" target="_blank" rel="noopener noreferrer">Lire tous les avis sur Google <span class="arrow">↗</span></a>
       </div>
     </section>
     <section class="ig"><div class="wrap"><p class="eyebrow">Dans les coulisses</p><h2>Les découvertes continuent sur Instagram.</h2><p>Mes dégustations, coups de cœur, découvertes de domaines et de distilleries : rejoignez l'aventure Devins & Divins.</p><a class="btn dark" href="https://www.instagram.com/devins_et_divins/" target="_blank" rel="noopener noreferrer">Suivre @devins_et_divins <span class="arrow">↗</span></a></div></section>
