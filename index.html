@@ -173,14 +173,55 @@ header nav {
       .field input, .field select, .field textarea { font-size: 1rem; }
     }
 
+    .formules { padding: clamp(48px, 8vw, 100px) 0; background: #f1f1f1; }
+    .formules-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 245px), 1fr)); gap: 20px; margin-bottom: 24px; }
+    .formules-grid article { background: #fff; padding: 24px; }
+    .formules-grid h3 { font-size: 1.8rem; margin-bottom: 10px; }
+    .formules-grid p { margin-bottom: 12px; }
+    .formules-grid p:last-child { margin-bottom: 0; }
+    .formule-prix { font-size: 1.1rem; font-weight: 700; }
   </style>
 </head>
 <body>
-  <header><nav class="wrap" aria-label="Navigation principale"><a href="#accueil" class="brand" aria-label="Devins et Divins, accueil"><img class="logo-img" src="logo-original-devins-divins.jpg" alt="Devins & Divins — verres et bouteille dessinés à la main"></a><div class="links"><a href="#concept">Le concept</a><a href="#experiences">Les expériences</a><a href="#cadeaux">Bons cadeaux</a><a href="#apropos">À propos</a><a class="nav-cta" href="#contact">Me contacter ↗</a></div><button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button></nav><div class="mobile-links" id="mobile-links"><a href="#concept">Le concept</a><a href="#experiences">Les expériences</a><a href="#cadeaux">Bons cadeaux</a><a href="#apropos">À propos</a><a href="#contact">Contact</a></div></header>
+  <header><nav class="wrap" aria-label="Navigation principale"><a href="#accueil" class="brand" aria-label="Devins et Divins, accueil"><img class="logo-img" src="logo-original-devins-divins.jpg" alt="Devins & Divins — verres et bouteille dessinés à la main"></a><div class="links"><a href="#concept">Le concept</a><a href="#experiences">Les expériences</a><a href="#formules">Tarifs</a><a href="#cadeaux">Bons cadeaux</a><a href="#apropos">À propos</a><a class="nav-cta" href="#contact">Me contacter ↗</a></div><button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button></nav><div class="mobile-links" id="mobile-links"><a href="#concept">Le concept</a><a href="#experiences">Les expériences</a><a href="#formules">Tarifs</a><a href="#cadeaux">Bons cadeaux</a><a href="#apropos">À propos</a><a href="#contact">Contact</a></div></header>
   <main>
     <section class="hero" id="accueil"><div class="wrap hero-content"><p class="eyebrow">Dégustations privées · <wbr><span>Alsace &amp; alentours</span></p><h1>De vins…<br><em>et surtout</em><br>de moments.</h1><p>Des vins, des spiritueux, des histoires et de belles découvertes. Vivez une dégustation conviviale et sur mesure, chez vous et avec ceux qui comptent.</p><div class="hero-action"><button class="btn light" data-open-booking>Organiser une dégustation <span class="arrow">↗</span></button><button class="btn outline-light" type="button" data-request="gift" aria-haspopup="dialog">Offrir un bon cadeau <span class="arrow">↗</span></button><button class="btn outline-light" type="button" data-request="wine-box" aria-haspopup="dialog">Réserver un coffret de vin <span class="arrow">↗</span></button><a class="btn outline-light" href="#experiences">Découvrir les expériences <span class="arrow">↓</span></a></div></div><div class="hero-bottom"><div class="wrap"><span>Le goût de découvrir · Le plaisir de partager</span><span>Défiler pour explorer ↓</span></div></div></section>
     <section class="intro" id="concept"><div class="wrap intro-grid"><div><p class="eyebrow">L'esprit Devins & Divins</p><h2>Le meilleur d'une bouteille, c'est ce qu'on partage autour.</h2><p class="lead">Pas de discours compliqué. Juste le plaisir de découvrir, comprendre et déguster ensemble.</p><p>Que vous soyez curieux, amateur ou passionné, chaque dégustation est une invitation à voyager dans les terroirs, à découvrir les savoir-faire et à vivre un moment qui vous ressemble.</p><a class="btn dark" href="#apropos">Découvrir mon histoire <span class="arrow">↗</span></a></div><div class="photo-frame"><img src="damien-tablier.jpeg" alt="Damien sert du vin en portant son tablier Devins &amp; Divins"></div></div></section>
     <section class="services" id="experiences"><div class="wrap"><div class="services-head"><div><p class="eyebrow">Nos expériences</p><h2>Une dégustation à votre image.</h2></div><p>Des expériences pensées pour éveiller la curiosité, ravir les palais et créer des souvenirs.</p></div><div class="cards"><article class="service-card"><div class="service-image"><img loading="lazy" src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80" alt="Verres de vin pour une dégustation"></div><div class="service-body"><span class="num">01 / DÉCOUVERTE</span><h3>Soirées vins</h3><p>Un voyage à travers les cépages, terroirs et domaines. Apprendre à déguster, simplement et sans se prendre au sérieux.</p><button class="text-link" data-booking-type="Dégustation de Vins">Organiser cette expérience <span class="arrow">↗</span></button></div></article><article class="service-card"><div class="service-image"><img src="whiskies-spiritueux.jpeg" alt="Coffrets de whiskies Galaad alignés sur une table"></div><div class="service-body"><span class="num">02 / EXPLORATION</span><h3>Whiskies & spiritueux</h3><p>Explorez les styles, les arômes et les secrets de fabrication au fil d'une sélection commentée et personnalisée.</p><button class="text-link" data-booking-type="Dégustation Whisky et Spiritueux">Organiser cette expérience <span class="arrow">↗</span></button></div></article><article class="service-card"><div class="service-image"><img src="accords-mets-vins-photo.jpeg" alt="Table de dégustation avec des verres et des fiches d’accords mets et vins"></div><div class="service-body"><span class="num">03 / HARMONIE</span><h3>Accords mets & vins</h3><p>Découvrez comment un plat et un vin se révèlent mutuellement, pour une soirée gourmande et mémorable.</p><button class="text-link" data-booking-type="Dégustation avec Accords Mets et Vins">Organiser cette expérience <span class="arrow">↗</span></button></div></article></div></div></section>
+    <section class="formules" id="formules" aria-labelledby="formules-title">
+      <div class="wrap">
+        <h2 id="formules-title">Formules et tarifs</h2>
+        <div class="formules-grid">
+          <article>
+            <h3>Dégustation</h3>
+            <p class="formule-prix">À partir de 35 € par personne</p>
+            <p>5 personnes minimum</p>
+            <p>Dégustez cinq vins ou spiritueux autour d’un thème choisi ensemble.</p>
+          </article>
+          <article>
+            <h3>Harmonie</h3>
+            <p class="formule-prix">À partir de 40 € par personne</p>
+            <p>4 personnes minimum</p>
+            <p>Vous prévoyez le menu. Je sélectionne cinq vins ou spiritueux pour accompagner vos plats, de l’apéritif au dessert.</p>
+          </article>
+          <article>
+            <h3>Signature</h3>
+            <p class="formule-prix">À partir de 65 € par personne</p>
+            <p>4 personnes minimum</p>
+            <p>Je compose le parcours complet, je prépare et fournis les mets et je sélectionne cinq vins ou spiritueux pour les accompagner.</p>
+          </article>
+          <article>
+            <h3>Sur mesure</h3>
+            <p class="formule-prix">Sur devis uniquement</p>
+            <p>4 personnes minimum</p>
+            <p>Après un échange sur vos envies, je construis un parcours mets et vins ou spiritueux et j’adapte le format à votre projet. Déplacement possible dans toute la France.</p>
+          </article>
+        </div>
+        <p>Toutes les formules comprennent l’animation, les fiches individuelles de dégustation, les verres et le matériel de service.</p>
+        <p>Pour les formules Dégustation, Harmonie et Signature, le déplacement à domicile ou dans le lieu de votre choix est inclus dans la limite de 150 km au départ d’Uffheim.</p>
+        <button class="btn dark" type="button" data-open-booking>Parlons de votre dégustation <span class="arrow">↗</span></button>
+      </div>
+    </section>
     <section class="promise"><div class="wrap"><p class="eyebrow">Comment ça se passe ?</p><h2>Vous profitez de l'instant.<br>Je m'occupe de l'expérience.</h2><div class="steps"><div class="step"><span class="count">01.</span><h3>On imagine</h3><p>Vous me racontez votre occasion, vos envies et les personnes que vous réunissez.</p></div><div class="step"><span class="count">02.</span><h3>Je prépare</h3><p>Nous définissons le thème et les bouteilles. La dégustation est pensée pour votre groupe.</p></div><div class="step"><span class="count">03.</span><h3>On partage</h3><p>Je vous accompagne dans la découverte, avec pédagogie, simplicité et convivialité.</p></div></div></div></section>
     <section class="gift" id="cadeaux" aria-labelledby="cadeaux-title">
       <h2 id="cadeaux-title">Offrir un souvenir</h2>
