@@ -105,5 +105,31 @@
     const dialog=document.getElementById('booking');function openBooking(type){if(type)document.getElementById('type').value=type;document.getElementById('copy-status').classList.remove('show');dialog.showModal()};document.querySelectorAll('[data-open-booking]').forEach(b=>b.addEventListener('click',()=>openBooking()));document.querySelectorAll('[data-booking-type]').forEach(b=>b.addEventListener('click',()=>openBooking(b.dataset.bookingType)));document.getElementById('close-booking').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});document.getElementById('year').textContent=new Date().getFullYear();
     document.getElementById('booking-form').addEventListener('submit',async e=>{e.preventDefault();const type=document.getElementById('type').value,guests=document.getElementById('guests').value,date=document.getElementById('date').value,msg=document.getElementById('message').value;const text=`Bonjour Damien, je souhaiterais me renseigner sur une expérience Devins & Divins.\nExpérience : ${type}${guests?'\nParticipants : '+guests:''}${date?'\nDate envisagée : '+date:''}${msg?'\nPrécisions : '+msg:''}\nMerci !`;let copied=false;try{await navigator.clipboard.writeText(text);copied=true}catch(err){}const status=document.getElementById('copy-status');status.classList.add('show');if(copied){status.textContent='Message copié ! Instagram va s’ouvrir : collez-le dans votre conversation.';window.open('https://www.instagram.com/devins_et_divins/','_blank','noopener,noreferrer')}else{status.replaceChildren(document.createTextNode('Copie automatique indisponible. Sélectionnez et copiez ce message :'));const ta=document.createElement('textarea');ta.value=text;ta.readOnly=true;ta.style.cssText='width:100%;height:150px;margin-top:10px';status.append(ta);ta.focus();ta.select();const a=document.createElement('a');a.href='https://www.instagram.com/devins_et_divins/';a.target='_blank';a.rel='noopener noreferrer';a.textContent='Ouvrir Instagram ↗';a.style.cssText='display:block;margin-top:10px;text-decoration:underline';status.append(a)}});
   </script>
+  
+<script>
+  fetch('/contenu/accueil.json')
+    .then(response => {
+      if (!response.ok) throw new Error('Fichier introuvable');
+      return response.json();
+    })
+    .then(contenu => {
+      const titre = document.querySelector('#accueil h1');
+      const description = document.querySelector(
+        '#accueil .hero-content > p:not(.eyebrow)'
+      );
+
+      if (titre && contenu.titre) {
+        titre.textContent = contenu.titre;
+      }
+
+      if (description && contenu.description) {
+        description.textContent = contenu.description;
+      }
+    })
+    .catch(error => {
+      console.error('Chargement du contenu CMS :', error);
+    });
+</script>
+
 </body>
 </html>
