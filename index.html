@@ -278,6 +278,10 @@ header nav {
     </div>
   </dialog>
   <script>
+    function formatDateFr(value) {
+      return value.split('-').reverse().join('/');
+    }
+
     document.querySelectorAll('[data-request]').forEach(button => {
       button.addEventListener('click', () => document.getElementById(button.dataset.request).showModal());
     });
@@ -289,7 +293,9 @@ header nav {
       form.addEventListener('submit', event => {
         event.preventDefault();
         const title = document.getElementById(dialog.getAttribute('aria-labelledby')).textContent;
-        const details = Array.from(new FormData(form))
+        const details = Array.from(new FormData(form), ([label, value]) => [
+          label, label === 'Date souhaitée' ? formatDateFr(value) : value
+        ])
           .filter(([, value]) => value.trim())
           .map(([label, value]) => label + ' : ' + value.trim());
         const body = ['Bonjour Damien,', '', ...details, '', 'Merci !'].join('\r\n');
@@ -299,7 +305,7 @@ header nav {
     });
     const menu=document.getElementById('mobile-links'),toggle=document.getElementById('menu-toggle');toggle.addEventListener('click',()=>{const open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',open);toggle.textContent=open?'×':'☰'});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));
     const dialog=document.getElementById('booking');function openBooking(type){if(type)document.getElementById('type').value=type;dialog.showModal()};document.querySelectorAll('[data-open-booking]').forEach(b=>b.addEventListener('click',()=>openBooking()));document.querySelectorAll('[data-booking-type]').forEach(b=>b.addEventListener('click',()=>openBooking(b.dataset.bookingType)));document.getElementById('close-booking').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});document.getElementById('year').textContent=new Date().getFullYear();
-    document.getElementById('booking-form').addEventListener('submit',e=>{e.preventDefault();const type=document.getElementById('type').value,guests=document.getElementById('guests').value,date=document.getElementById('date').value,msg=document.getElementById('message').value;const text=`Bonjour Damien, je souhaiterais me renseigner sur une expérience Devins & Divins.\nExpérience : ${type}${guests?'\nParticipants : '+guests:''}${date?'\nDate envisagée : '+date:''}${msg?'\nPrécisions : '+msg:''}\nMerci !`;const subject=encodeURIComponent('Demande de dégustation — Devins & Divins');window.location.href=`mailto:devins_et_divins@icloud.com?subject=${subject}&body=${encodeURIComponent(text)}`;});
+    document.getElementById('booking-form').addEventListener('submit',e=>{e.preventDefault();const type=document.getElementById('type').value,guests=document.getElementById('guests').value,date=document.getElementById('date').value,msg=document.getElementById('message').value;const text=`Bonjour Damien, je souhaiterais me renseigner sur une expérience Devins & Divins.\nExpérience : ${type}${guests?'\nParticipants : '+guests:''}${date?'\nDate envisagée : '+formatDateFr(date):''}${msg?'\nPrécisions : '+msg:''}\nMerci !`;const subject=encodeURIComponent('Demande de dégustation — Devins & Divins');window.location.href=`mailto:devins_et_divins@icloud.com?subject=${subject}&body=${encodeURIComponent(text)}`;});
   </script>
   
 <script>
