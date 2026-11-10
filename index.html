@@ -84,6 +84,43 @@
     nav{min-height:112px}
     .footer-main .brand .logo-img{width:126px;height:126px;filter:none!important}
     @media(max-width:650px){nav{min-height:92px}.logo-img{width:75px;height:75px}.footer-main .brand .logo-img{width:112px;height:112px}.mobile-links{top:92px}}
+  
+/* Masquer le menu mobile sur ordinateur */
+.mobile-links {
+  display: none;
+}
+
+/* Agrandir le logo original sur Mac */
+header .logo-img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+}
+
+header nav {
+  min-height: 180px;
+}
+
+/* Adaptation pour iPhone */
+@media (max-width: 650px) {
+  header .logo-img {
+    width: 105px;
+    height: 105px;
+  }
+
+  header nav {
+    min-height: 125px;
+  }
+
+  .mobile-links {
+    top: 125px;
+  }
+
+  .mobile-links.open {
+    display: flex;
+  }
+}
+
   </style>
 </head>
 <body>
