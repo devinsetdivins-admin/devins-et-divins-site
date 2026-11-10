@@ -149,10 +149,11 @@ header nav {
     .gift .gift-content p { margin: 0 24px 24px; }
     .gift .gift-content .btn { align-self: flex-start; margin: auto 24px 24px; }
     @media (max-width: 650px) {
-      header { position: relative; }
+      html { scroll-padding-top: 93px; }
+      header { position: sticky; }
       header .logo-img { width: 68px; height: 68px; }
       .menu-toggle { min-width: 44px; min-height: 44px; }
-      .mobile-links { top: 100%; gap: 0; }
+      .mobile-links { top: 100%; gap: 0; max-height: calc(100dvh - 93px); overflow-y: auto; }
       .mobile-links a { display: flex; align-items: center; min-height: 44px; }
 
       .hero {
