@@ -1,0 +1,16 @@
+
+media: media
+
+content:
+  - name: accueil
+    label: Accueil
+    type: file
+    path: contenu/accueil.json
+    format: json
+    fields:
+      - name: titre
+        label: Titre principal
+        type: string
+      - name: description
+        label: Présentation
+        type: text
