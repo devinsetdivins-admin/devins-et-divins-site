@@ -386,15 +386,25 @@ header nav {
   <dialog id="wine-box" aria-labelledby="wine-box-title" data-request-dialog>
     <div class="modal">
       <div class="modal-head">
-        <div><h2 id="wine-box-title">Réserver un coffret de vin</h2><p>Indiquez votre budget et vos envies pour une sélection de vins à offrir.</p></div>
+        <div><h2 id="wine-box-title">Offrir un coffret</h2><p>Indiquez votre budget et vos envies pour une sélection à offrir.</p></div>
         <form method="dialog"><button class="close" aria-label="Fermer">×</button></form>
       </div>
       <form data-request-form>
-        <label class="field">Votre nom<input name="Nom" type="text" autocomplete="name" required></label>
-        <label class="field">Nombre de coffrets<input name="Nombre de coffrets" type="number" min="1" value="1" required></label>
+        <label class="field">Nom et prénom<input name="Nom et prénom" type="text" autocomplete="name" required></label>
+        <label class="field">Téléphone (facultatif)<input name="Téléphone" type="tel" autocomplete="tel"></label>
+        <label class="field">Type de bouteilles
+          <select name="Type de bouteilles" required>
+            <option value="">Choisissez une catégorie</option>
+            <option>Vins</option>
+            <option>Spiritueux</option>
+            <option>Effervescents</option>
+            <option>Autres</option>
+          </select>
+        </label>
+        <label class="field">Nombre de bouteilles<input name="Nombre de bouteilles" type="number" min="1" value="1" required></label>
         <label class="field">Budget par coffret (€)<input name="Budget par coffret (€)" type="number" min="1" step="0.01" required></label>
         <label class="field">Date souhaitée (facultatif)<input name="Date souhaitée" type="date"></label>
-        <label class="field">Préférences ou occasion (facultatif)<textarea name="Préférences ou occasion" rows="3" placeholder="Rouge, blanc, découverte, anniversaire…"></textarea></label>
+        <label class="field">Préférences ou occasion (facultatif)<textarea name="Préférences ou occasion" rows="3" placeholder="Un style, une bouteille ou une occasion…"></textarea></label>
         <button class="btn dark" type="submit">Ouvrir mon e-mail ↗</button>
         <p class="note">Votre messagerie ouvrira un brouillon avec les détails de votre demande.</p>
       </form>
