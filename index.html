@@ -269,6 +269,11 @@ header nav {
     @media (max-width: 650px) {
       .hero-action .btn { justify-content: center; }
     }
+    .gift .gift-voucher {
+      background: #161616;
+      object-fit: contain;
+      filter: none;
+    }
   </style>
 </head>
 <body>
@@ -318,7 +323,7 @@ header nav {
     <section class="gift" id="cadeaux" aria-labelledby="cadeaux-title">
       <h2 id="cadeaux-title">Offrir un souvenir</h2>
       <article class="gift-content">
-        <div class="gift-image" role="img" aria-label="Verres et bouteille dans une ambiance chaleureuse"></div>
+        <img class="gift-image gift-voucher" src="bon-cadeau-devins-divins.jpg" alt="Bon de dégustation Devins &amp; Divins affiché sur une tablette" loading="lazy">
         <h3>Bon cadeau</h3>
         <p>Offrez une dégustation privée à partager autour du vin ou des spiritueux. Choisissez le montant du bon et ajoutez un mot pour la personne à qui vous l’offrez.</p>
         <button class="btn dark" type="button" data-request="gift" aria-haspopup="dialog">Offrir un bon cadeau <span class="arrow">↗</span></button>
