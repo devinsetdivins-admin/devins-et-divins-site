@@ -234,26 +234,30 @@ header nav {
     .avis-grid p:last-child { margin-bottom: 0; }
     footer .brand { display: block; padding: 0; background: transparent; }
     .footer-logo { display: block; width: 340px; max-width: 100%; height: auto; }
-    @media (max-width: 650px) {
-      .service-body button.text-link {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        min-height: 44px;
-        padding: 10px 14px;
-        border: 1px solid #fff;
-        background: #fff;
-        color: #171717;
-        font: inherit;
-        font-size: .85rem;
-        font-weight: 700;
-        letter-spacing: .04em;
-        text-align: center;
-      }
-      .service-body button.text-link:focus-visible {
-        outline: 2px solid #fff;
-        outline-offset: 3px;
-      }
+    .service-body button.text-link {
+      appearance: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 14px;
+      border: 1px solid #fff;
+      background: #fff;
+      color: #171717;
+      font: inherit;
+      font-size: .9rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: center;
+      text-transform: none;
+      cursor: pointer;
+    }
+    .service-body button.text-link:hover { background: #e4e4e4; }
+    .service-body button.text-link:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 3px;
     }
     .footer-identity {
       display: grid;
