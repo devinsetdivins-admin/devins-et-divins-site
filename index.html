@@ -131,8 +131,9 @@ header nav {
     .hero .eyebrow span { white-space: nowrap; }
     @media (min-width: 1100px) {
       .hero-content > p:not(.eyebrow) {
-        max-width: none;
-        font-size: min(1.15vw, .9rem);
+        max-width: 64ch;
+        font-size: 1rem;
+        text-wrap: balance;
       }
     }
 
@@ -244,12 +245,25 @@ header nav {
       .footer-identity .brand { width: min(100%, 300px); }
       .footer-identity p { max-width: 36ch; }
     }
+    .hero-action .hero-explore {
+      border-color: transparent;
+      background: transparent;
+      color: #fff;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+    @media (min-width: 651px) {
+      header .logo-img { width: 120px; height: 120px; }
+    }
+    @media (max-width: 650px) {
+      .hero-action .btn { justify-content: center; }
+    }
   </style>
 </head>
 <body>
   <header><nav class="wrap" aria-label="Navigation principale"><a href="#accueil" class="brand" aria-label="Devins et Divins, accueil"><img class="logo-img" src="logo-original-devins-divins.jpg" alt="Devins & Divins — verres et bouteille dessinés à la main"></a><div class="links"><a href="#concept">Le concept</a><a href="#experiences">Les expériences</a><a href="#formules">Tarifs</a><a href="#cadeaux">Bons cadeaux</a><a href="#apropos">À propos</a><a class="nav-cta" href="#contact">Me contacter ↗</a></div><button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button></nav><div class="mobile-links" id="mobile-links"><a href="#concept">Le concept</a><a href="#experiences">Les expériences</a><a href="#formules">Tarifs</a><a href="#cadeaux">Bons cadeaux</a><a href="#apropos">À propos</a><a href="#contact">Contact</a></div></header>
   <main>
-    <section class="hero" id="accueil"><div class="wrap hero-content"><p class="eyebrow">Dégustations privées · <wbr><span>Alsace &amp; alentours</span></p><h1>De vins…<br><em>et surtout</em><br>de moments.</h1><p>Des vins, des spiritueux, des histoires et de belles découvertes. Vivez une dégustation conviviale et sur mesure, chez vous et avec ceux qui comptent.</p><div class="hero-action"><button class="btn light" data-open-booking>Participer à une dégustation <span class="arrow">↗</span></button><button class="btn outline-light" type="button" data-request="gift" aria-haspopup="dialog">Offrir un bon cadeau <span class="arrow">↗</span></button><button class="btn outline-light" type="button" data-request="wine-box" aria-haspopup="dialog">Réserver un coffret de vin <span class="arrow">↗</span></button><a class="btn outline-light" href="#experiences">Découvrir les expériences <span class="arrow">↓</span></a></div></div><div class="hero-bottom"><div class="wrap"><span>Le goût de découvrir · Le plaisir de partager</span><span>Défiler pour explorer ↓</span></div></div></section>
+    <section class="hero" id="accueil"><div class="wrap hero-content"><p class="eyebrow">Dégustations privées · <wbr><span>Alsace &amp; alentours</span></p><h1>De vins…<br><em>et surtout</em><br>de moments.</h1><p>Des vins, des spiritueux, des histoires et de belles découvertes. Vivez une dégustation conviviale et sur mesure, chez vous et avec ceux qui comptent.</p><div class="hero-action"><button class="btn light" data-open-booking>Participer à une dégustation <span class="arrow">↗</span></button><button class="btn outline-light" type="button" data-request="gift" aria-haspopup="dialog">Offrir un bon cadeau <span class="arrow">↗</span></button><button class="btn outline-light" type="button" data-request="wine-box" aria-haspopup="dialog">Réserver un coffret de vin <span class="arrow">↗</span></button><a class="btn hero-explore" href="#experiences">Découvrir les expériences <span class="arrow">↓</span></a></div></div><div class="hero-bottom"><div class="wrap"><span>Le goût de découvrir · Le plaisir de partager</span><span>Défiler pour explorer ↓</span></div></div></section>
     <section class="intro" id="concept"><div class="wrap intro-grid"><div><p class="eyebrow">L'esprit Devins & Divins</p><h2>Le meilleur d'une bouteille, c'est ce qu'on partage autour.</h2><p class="lead">Pas de discours compliqué. Juste le plaisir de découvrir, comprendre et déguster ensemble.</p><p>Que vous soyez curieux, amateur ou passionné, chaque dégustation est une invitation à voyager dans les terroirs, à découvrir les savoir-faire et à vivre un moment qui vous ressemble.</p><a class="btn dark" href="#apropos">Découvrir mon histoire <span class="arrow">↗</span></a></div><div class="photo-frame"><img src="damien-tablier.jpeg" alt="Damien sert du vin en portant son tablier Devins &amp; Divins"></div></div></section>
     <section class="services" id="experiences"><div class="wrap"><div class="services-head"><div><p class="eyebrow">Nos expériences</p><h2>Une dégustation à votre image.</h2></div><p>Des expériences pensées pour éveiller la curiosité, ravir les palais et créer des souvenirs.</p></div><div class="cards"><article class="service-card"><div class="service-image"><img loading="lazy" src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80" alt="Verres de vin pour une dégustation"></div><div class="service-body"><span class="num">01 / DÉCOUVERTE</span><h3>Soirées vins</h3><p>Un voyage à travers les cépages, terroirs et domaines. Apprendre à déguster, simplement et sans se prendre au sérieux.</p><button class="text-link" data-booking-type="Formule Dégustation" data-booking-theme="Vins">Organiser cette expérience <span class="arrow">↗</span></button></div></article><article class="service-card"><div class="service-image"><img src="whiskies-spiritueux.jpeg" alt="Coffrets de whiskies Galaad alignés sur une table"></div><div class="service-body"><span class="num">02 / EXPLORATION</span><h3>Whiskies & spiritueux</h3><p>Explorez les styles, les arômes et les secrets de fabrication au fil d'une sélection commentée et personnalisée.</p><button class="text-link" data-booking-type="Formule Dégustation" data-booking-theme="Whisky et spiritueux">Organiser cette expérience <span class="arrow">↗</span></button></div></article><article class="service-card"><div class="service-image"><img src="accords-mets-vins-photo.jpeg" alt="Table de dégustation avec des verres et des fiches d’accords mets et vins"></div><div class="service-body"><span class="num">03 / HARMONIE</span><h3>Accords mets & vins</h3><p>Découvrez comment un plat et un vin se révèlent mutuellement, pour une soirée gourmande et mémorable.</p><button class="text-link" data-booking-type="Formule Harmonie">Organiser cette expérience <span class="arrow">↗</span></button></div></article></div></div></section>
     <section class="formules" id="formules" aria-labelledby="formules-title">
