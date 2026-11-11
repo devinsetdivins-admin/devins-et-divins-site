@@ -285,12 +285,12 @@ header nav {
     }
     .promise-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 36%);
+      grid-template-columns: minmax(0, 1fr) minmax(0, 30%);
       gap: clamp(24px, 5vw, 64px);
       text-align: left;
     }
     .promise-copy h2 { margin: 0 0 32px; }
-    .promise-copy .steps { grid-template-columns: 1fr; gap: 16px; }
+    .promise-copy .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 2vw, 24px); }
     .promise-copy .step p { margin-bottom: 0; }
     .promise-video {
       display: block;
@@ -303,7 +303,8 @@ header nav {
     }
     @media (max-width: 760px) {
       .promise-layout { grid-template-columns: minmax(0, 1fr); }
-      .promise-video { height: auto; max-width: 360px; justify-self: center; }
+      .promise-copy .steps { grid-template-columns: 1fr; }
+      .promise-video { height: auto; max-width: 300px; justify-self: center; }
     }
   </style>
 </head>
